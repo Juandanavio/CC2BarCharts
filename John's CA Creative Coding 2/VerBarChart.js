@@ -21,7 +21,7 @@ class VerBarChart {
         this.showLabels = true;
         this.rotateLabels = true;
 
-        this.colors = [color('#FF7F50'), color('#000080')];
+        this.colors = [color('#000080'), color('#FF7F50'), color('#EADDCA')];
 
         this.updateValues();
         this.calculateMaxValue();
@@ -107,19 +107,21 @@ class VerBarChart {
         fill(0, 0, 128);
         rect(350, -this.chartHeight/2, 15 );
         fill(255, 127, 80);
-        rect(515,-this.chartHeight/2,15);
+        rect(546,-this.chartHeight/2,15);
+        fill(234, 221, 202);
+        rect(725,-this.chartHeight/2,15);
         noStroke();
         fill(255);
         textSize(13);
         textAlign(CENTER, RIGHT);
-        text(this.legend, this.chartWidth +270, -this.chartHeight/2);
+        text(this.legend, this.chartWidth +395, -this.chartHeight/2 + 2);
     }
 
     drawRects() {
         push();
         translate(this.margin, 0);
         for (let i = 0; i < this.data.length; i++) {
-            let colorNumber = i % 2;
+            let colorNumber = i % 3;
 
             fill(this.colors[colorNumber]);
             noStroke();
@@ -128,7 +130,7 @@ class VerBarChart {
             //numbers (text)
             noStroke();
             fill(255);
-            textSize(16);
+            textSize(12);
             textAlign(CENTER, BOTTOM);
             text(this.data[i].total, ((this.barWidth + this.spacing) * i) + this.barWidth / 2, this.scaleData(-this.data[i].total)-5);
 
@@ -141,7 +143,7 @@ class VerBarChart {
                     textAlign(LEFT, CENTER);
                     translate(((this.barWidth + this.spacing) * i) + this.barWidth / 2, 10);
                     rotate(PI / 2)
-                    text(this.data[i].name, 0, 15);
+                    text(this.data[i].name, 0, 2);
                     pop()
                 } else {
 

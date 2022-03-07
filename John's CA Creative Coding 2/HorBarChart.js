@@ -105,9 +105,9 @@ class HorBarChart {
 
     drawLegend() {
         fill(0, 0, 128);
-        rect(-46,85 , 15 );
+        rect(-58,85 , 15 );
         fill(255, 127, 80);
-        rect(120,85,15);
+        rect(135,85,15);
         noStroke();
         fill(255);
         textSize(13);
