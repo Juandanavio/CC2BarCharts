@@ -141,7 +141,7 @@ class VerBarChart {
                     textAlign(LEFT, CENTER);
                     translate(((this.barWidth + this.spacing) * i) + this.barWidth / 2, 10);
                     rotate(PI / 2)
-                    text(this.data[i].name, 0, 0);
+                    text(this.data[i].name, 0, 15);
                     pop()
                 } else {
 
