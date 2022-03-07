@@ -20,6 +20,22 @@ let data02 = [
     { name: "Public order and other social code offences",values: [32,30], total: 62 }
 ];
 
+let data03 = [
+
+    { name2: "Attempts/threats to murder and assaults", total: 21}
+    { name: "Attempts/threats to murder and assaults", total: 19}
+    { name3: "Attempts/threats to murder and assaults", total: 19}
+    { name2: "Burglary and related offences",values:  total: 16}
+    { name: "Burglary and related offences",values:  total: 13}
+    { name3: "Burglary and related offences",values:  total: 8}
+    { name2: "Theft and related offences",values:  total: 68}
+    { name: "Theft and related offences",values:  total: 56}
+    { name3: "Theft and related offences",values:  total: 45}
+    { name2: "Public order and other social code offences", total: 32}
+    { name: "Public order and other social code offences", total: 30}
+    { name3: "Public order and other social code offences", total: 27}
+];
+
 
 let chart01;
 let chart02;
