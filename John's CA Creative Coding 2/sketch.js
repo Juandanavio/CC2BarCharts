@@ -59,7 +59,7 @@ function setup() {
     chart02.posY = 400;
     chart02.updateValues();
 
-    chart03 = new StckHorBarChart(data02, "Recorded crime incidents classified by offence group before and during COVID 19 (in thousands)", "2019 (Before of COVID19)           2020 (During COVID19)           2021(One Year into COVID19)")
+    chart03 = new StckHorBarChart(data02, "Recorded crime incidents classified by offence group before, during and one year into COVID 19 (in thousands)", "2019 (Before of COVID19)           2020 (During COVID19)           2021(One Year into COVID19)")
     chart03.chartWidth = 250;
     chart03.chartHeight = 250
     chart03.posX = 1000;
