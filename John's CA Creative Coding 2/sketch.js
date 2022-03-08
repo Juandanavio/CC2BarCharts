@@ -36,7 +36,6 @@ let data03 = [
     { name3: "Public order and other social code offences", total: 27}
 ];
 
-
 let chart01;
 let chart02;
 let chart03;
