@@ -10,7 +10,7 @@
 // ];
 let data01 = [
 
-    { name: "Attempts/threats to murder and assaults",values: [21,19], total: 21 },
+    { name: "Attempts/threats to murder and assaults",values: [21, 19], total: 21 },
 
     { name: "Burglary and related offences",values: [16,13], total: 16 },
 
