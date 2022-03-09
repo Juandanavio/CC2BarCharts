@@ -23,7 +23,7 @@ class StckHorBarChart {
         this.showLabels = true;
         this.rotateLabels = true;
 
-        this.colors = [color('#FF7F50'), color('#000080'), color('#EADDCA')];
+        this.colors = [color('#000080'), color('#FF7F50'), color('#EADDCA')];
 
         this.updateValues();
         this.calculateMaxValue();
@@ -108,9 +108,9 @@ class StckHorBarChart {
     }
 
     drawLegend() {
-        fill(255, 127, 80);
-        rect(-166,85 , 15 );
         fill(0, 0, 128);
+        rect(-166,85 , 15 );
+        fill(255, 127, 80);
         rect(26,85,15);
         fill(234, 221, 202);
         rect(205,85,15);

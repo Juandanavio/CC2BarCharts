@@ -100,7 +100,7 @@ class VerBarChart {
         fill(255);
         textSize(13);
         textAlign(CENTER, TOP);
-        text(this.title, this.chartWidth/2, -this.chartHeight -60);
+        text(this.title, this.chartWidth/2 +20, -this.chartHeight -60);
     }
 
     drawLegend() {

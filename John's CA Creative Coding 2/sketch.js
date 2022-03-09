@@ -47,22 +47,22 @@ let chart03;
 function setup() {
     createCanvas(1500, 1350);
 
-    chart01 = new VerBarChart(data03, "Recorded crime incidents classified by offence group before, during, one year and the present with COVID 19 (in thousands)", "2019 (Before of COVID19)           2020 (During COVID19)           2021(One Year into COVID19)           2022(The Present with COVID19)")
+    chart01 = new VerBarChart(data03, "Recorded crime incidents classified by offence group before, during, one year and the present with COVID 19 in Ireland(in thousands)", "2019 (Before of COVID19)           2020 (During COVID19)           2021(One Year into COVID19)           2022(The Present with COVID19)")
     chart01.chartWidth = 350;
-    chart01.chartHeight = 350
+    chart01.chartHeight = 350;
     chart01.posX = 200;
     chart01.posY = 1050;
     chart01.spacing = 8;
     chart01.updateValues();
 
-    chart02 = new HorBarChart(data01, "Recorded crime incidents classified by offence group before and during COVID 19 (in thousands)", "2019 (Before of COVID19)           2020 (During COVID19)")
+    chart02 = new HorBarChart(data01, "Recorded crime incidents classified by offence group before and during COVID 19 in Ireland(in thousands)", "2019 (Before of COVID19)           2020 (During COVID19)")
     chart02.chartWidth = 250;
     chart02.chartHeight = 250
     chart02.posX = 280;
     chart02.posY = 400;
     chart02.updateValues();
 
-    chart03 = new StckHorBarChart(data02, "Recorded crime incidents classified by offence group before, during and one year into COVID 19 (in thousands)", "2019 (Before of COVID19)           2020 (During COVID19)           2021(One Year into COVID19)")
+    chart03 = new StckHorBarChart(data02, "Recorded crime incidents classified by offence group before, during and one year into COVID 19 in Ireland(in thousands)", "2019 (Before of COVID19)           2020 (During COVID19)           2021(One Year into COVID19)")
     chart03.chartWidth = 250;
     chart03.chartHeight = 250
     chart03.posX = 1000;
