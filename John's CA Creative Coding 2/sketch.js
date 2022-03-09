@@ -25,15 +25,19 @@ let data03 = [
     { name2: "Attempts/threats to murder and assaults", total: 21},
     { name: "Attempts/threats to murder and assaults", total: 19},
     { name3: "Attempts/threats to murder and assaults", total: 19},
+    { name4: "Attempts/threats to murder and assaults", total: 28},
     { name2: "Burglary and related offences", total: 16},
     { name: "Burglary and related offences",  total: 13},
     { name3: "Burglary and related offences",  total: 8},
+    { name4: "Burglary and related offences",  total: 19},
     { name2: "Theft and related offences",  total: 68},
     { name: "Theft and related offences", total: 56},
     { name3: "Theft and related offences", total: 45},
+    { name4: "Theft and related offences", total: 70},
     { name2: "Public order and other social code offences", total: 32},
     { name: "Public order and other social code offences", total: 30},
-    { name3: "Public order and other social code offences", total: 27}
+    { name3: "Public order and other social code offences", total: 27},
+    { name4: "Public order and other social code offences", total: 37}
 ];
 
 let chart01;
@@ -41,14 +45,14 @@ let chart02;
 let chart03;
 
 function setup() {
-    createCanvas(1500, 1300);
+    createCanvas(1500, 1350);
 
-    chart01 = new VerBarChart(data03, "Recorded crime incidents classified by offence group before, during and one year into COVID 19 (in thousands)", "2019 (Before of COVID19)           2020 (During COVID19)           2021(One Year into COVID19)")
-    chart01.chartWidth = 250;
-    chart01.chartHeight = 250
-    chart01.posX = 450;
-    chart01.posY = 950;
-    chart01.spacing =5;
+    chart01 = new VerBarChart(data03, "Recorded crime incidents classified by offence group before, during, one year and the present with COVID 19 (in thousands)", "2019 (Before of COVID19)           2020 (During COVID19)           2021(One Year into COVID19)           2022(The Present with COVID19)")
+    chart01.chartWidth = 350;
+    chart01.chartHeight = 350
+    chart01.posX = 200;
+    chart01.posY = 1050;
+    chart01.spacing = 8;
     chart01.updateValues();
 
     chart02 = new HorBarChart(data01, "Recorded crime incidents classified by offence group before and during COVID 19 (in thousands)", "2019 (Before of COVID19)           2020 (During COVID19)")

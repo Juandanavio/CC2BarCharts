@@ -6,7 +6,7 @@ class VerBarChart {
         this.chartWidth = 300;
         this.chartHeight = 300;
         this.spacing = 5;
-        this.margin = 30;
+        this.margin = 20;
         this.numTicks = 10;
         this.posX = 50;
         this.posY = 400;
@@ -21,7 +21,7 @@ class VerBarChart {
         this.showLabels = true;
         this.rotateLabels = true;
 
-        this.colors = [color('#000080'), color('#FF7F50'), color('#EADDCA')];
+        this.colors = [color('#000080'), color('#FF7F50'), color('#EADDCA'), color('#32CD32')];
 
         this.updateValues();
         this.calculateMaxValue();
@@ -105,23 +105,25 @@ class VerBarChart {
 
     drawLegend() {
         fill(0, 0, 128);
-        rect(350, -this.chartHeight/2, 15 );
+        rect(450, -this.chartHeight/2, 15 );
         fill(255, 127, 80);
-        rect(546,-this.chartHeight/2,15);
+        rect(645,-this.chartHeight/2,15);
         fill(234, 221, 202);
-        rect(725,-this.chartHeight/2,15);
+        rect(823,-this.chartHeight/2,15);
+        fill(50, 205, 50);
+        rect(1040, -this.chartHeight/2, 15 );
         noStroke();
         fill(255);
         textSize(13);
         textAlign(CENTER, RIGHT);
-        text(this.legend, this.chartWidth +395, -this.chartHeight/2 + 2);
+        text(this.legend, this.chartWidth +510, -this.chartHeight/2 + 2);
     }
 
     drawRects() {
         push();
         translate(this.margin, 0);
         for (let i = 0; i < this.data.length; i++) {
-            let colorNumber = i % 3;
+            let colorNumber = i % 4;
 
             fill(this.colors[colorNumber]);
             noStroke();
@@ -142,8 +144,8 @@ class VerBarChart {
                     textSize(14);
                     textAlign(LEFT, CENTER);
                     translate(((this.barWidth + this.spacing) * i) + this.barWidth / 2, 10);
-                    rotate(PI / 2)
-                    text(this.data[i].name, 0, 2);
+                    rotate(PI / 3)
+                    text(this.data[i].name, 0, -5);
                     pop()
                 } else {
 
