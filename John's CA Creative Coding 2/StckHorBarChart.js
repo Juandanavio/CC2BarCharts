@@ -133,7 +133,8 @@ class StckHorBarChart {
                 fill(this.colors[colorNumber]);
                 noStroke();
                 rect(0,(this.barWidth + this.spacing) * -i, this.scaleData(this.data[i].values[j]),-this.barWidth +5);
-                translate( this.scaleData(this.data[i].values[j]),0)
+                translate( this.scaleData(this.data[i].values[j]),0);
+                // translate(0,this.barWidth-2);
 
             }
             pop();

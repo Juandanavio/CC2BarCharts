@@ -5,7 +5,7 @@ class VerBarChart {
         this.legend = _legend;
         this.chartWidth = 300;
         this.chartHeight = 300;
-        this.spacing = 5;
+        this.spacing = 90;
         this.margin = 20;
         this.numTicks = 10;
         this.posX = 50;
@@ -62,7 +62,7 @@ class VerBarChart {
         stroke(255, 180);
         strokeWeight(1);
         line(0, 0, 0, -this.chartHeight); //y
-        line(0, 0, this.chartWidth, 0); //x
+        line(0, 0, this.chartWidth +85, 0); //x
     }
 
     drawTicks() {
@@ -89,7 +89,7 @@ class VerBarChart {
             //horizontal line
             stroke(255, 50);
             strokeWeight(1)
-            line(0, this.tickSpacing * -i, this.chartWidth, this.tickSpacing * -i);
+            line(0, this.tickSpacing * -i, this.chartWidth +85, this.tickSpacing * -i);
 
 
         }
@@ -123,18 +123,31 @@ class VerBarChart {
         push();
         translate(this.margin, 0);
         for (let i = 0; i < this.data.length; i++) {
-            let colorNumber = i % 4;
+            push();
+            for ( let j = 0; j < this.data[i].values.length; j++){
+    
+                let colorNumber = j % 4;
 
-            fill(this.colors[colorNumber]);
-            noStroke();
-            rect((this.barWidth + this.spacing) * i, 0, this.barWidth, this.scaleData(-this.data[i].total));
+                fill(this.colors[colorNumber]);
+                noStroke();
+                rect((this.barWidth + this.spacing) * i,0,this.barWidth +5 ,this.scaleData(-this.data[i].values[j]));
+                // translate( this.scaleData(this.data[i].values[j]),0);
+                translate(this.barWidth +10,0);
+
+            }
+            pop();
+            // let colorNumber = i % 4;
+
+            // fill(this.colors[colorNumber]);
+            // noStroke();
+            // rect((this.barWidth + this.spacing) * i, 0, this.barWidth, this.scaleData(-this.data[i].total));
 
             //numbers (text)
             noStroke();
             fill(255);
-            textSize(12);
+            textSize(16);
             textAlign(CENTER, BOTTOM);
-            text(this.data[i].total, ((this.barWidth + this.spacing) * i) + this.barWidth / 2, this.scaleData(-this.data[i].total)-5);
+            text(this.data[i].values, ((this.barWidth + this.spacing) * i) + this.barWidth / 2 +30, this.scaleData(-this.data[i].total)-20);
 
             //text
             if (this.showLabels) {
@@ -143,8 +156,8 @@ class VerBarChart {
                     noStroke();
                     textSize(14);
                     textAlign(LEFT, CENTER);
-                    translate(((this.barWidth + this.spacing) * i) + this.barWidth / 2, 10);
-                    rotate(PI / 3)
+                    translate(((this.barWidth + this.spacing) * i) + this.barWidth *2 +10, 20);
+                    rotate(PI / 4)
                     text(this.data[i].name, 0, -5);
                     pop()
                 } else {
